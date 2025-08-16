@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Home from "./pages/Home";
-import Products from "./pages/Products";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Home from "./pages/Home/Home";
+import Products from "./pages/Product/Products";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 import "./App.css";
 
 const translations = {
