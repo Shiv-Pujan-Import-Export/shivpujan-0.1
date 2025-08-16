@@ -1,0 +1,58 @@
+{
+  "logo": "Shiv Pujan",
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "heading": "Welcome to Shiv Pujan Import Export",
+    "paragraph": "Your trusted partner for seamless global trade. Shiv Pujan connects businesses worldwide, ensuring reliable import and export solutions for a variety of products.",
+    "button": "Get Started"
+  },
+  "about": {
+    "heading": "About Us",
+    "paragraph": "Shiv Pujan Import Export was founded with a vision to bridge markets and cultures through global trade. Our mission is to provide reliable, transparent, and efficient import-export services, empowering businesses to grow beyond borders.",
+    "list": [
+      "Over 10 years of experience in international trade",
+      "Strong network of partners worldwide",
+      "Commitment to quality and customer satisfaction"
+    ]
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "paragraph": "We’d love to hear from you! Reach out for business inquiries or partnership opportunities.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "button": "Send Message"
+    },
+    "info": {
+      "email": "info@shippujan.com",
+      "phone": "+91 98765 43210",
+      "address": "123, Trade Avenue, Mumbai, India",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "addressLabel": "Address"
+    }
+  },
+  "products": {
+    "heading": "Our Products & Services",
+    "items": [
+      {
+        "name": "Fresh Fruits",
+        "desc": "High quality tropical fruits sourced globally."
+      },
+      {
+        "name": "Organic Spices",
+        "desc": "Authentic spices with rich aroma and taste."
+      },
+      {
+        "name": "Handicrafts",
+        "desc": "Traditional handmade crafts from local artisans."
+      }
+    ]
+  }
+}

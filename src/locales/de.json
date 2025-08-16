@@ -1,0 +1,58 @@
+{
+  "logo": "Shiv Pujan",
+  "nav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "heading": "Willkommen bei Shiv Pujan Import Export",
+    "paragraph": "Ihr vertrauensvoller Partner für reibungslosen globalen Handel. Shiv Pujan verbindet Unternehmen weltweit und stellt zuverlässige Import- und Exportlösungen für eine Vielzahl von Produkten bereit.",
+    "button": "Loslegen"
+  },
+  "about": {
+    "heading": "Über uns",
+    "paragraph": "Shiv Pujan Import Export wurde mit der Vision gegründet, Märkte und Kulturen durch globalen Handel zu verbinden. Unsere Mission ist es, zuverlässige, transparente und effiziente Import-Export-Dienstleistungen bereitzustellen und Unternehmen beim Wachstum über Grenzen hinweg zu unterstützen.",
+    "list": [
+      "Über 10 Jahre Erfahrung im internationalen Handel",
+      "Starkes Partnernetzwerk weltweit",
+      "Engagement für Qualität und Kundenzufriedenheit"
+    ]
+  },
+  "contact": {
+    "heading": "Kontaktieren Sie uns",
+    "paragraph": "Wir würden uns freuen, von Ihnen zu hören! Kontaktieren Sie uns für geschäftliche Anfragen oder Partnerschaften.",
+    "form": {
+      "name": "Ihr Name",
+      "email": "Ihre E-Mail",
+      "message": "Ihre Nachricht",
+      "button": "Nachricht senden"
+    },
+    "info": {
+      "email": "info@shippujan.com",
+      "phone": "+91 98765 43210",
+      "address": "123, Trade Avenue, Mumbai, Indien",
+      "emailLabel": "E-Mail",
+      "phoneLabel": "Telefon",
+      "addressLabel": "Adresse"
+    }
+  },
+  "products": {
+    "heading": "Unsere Produkte und Dienstleistungen",
+    "items": [
+      {
+        "name": "Frisches Obst",
+        "desc": "Hochwertige tropische Früchte aus aller Welt."
+      },
+      {
+        "name": "Bio-Gewürze",
+        "desc": "Authentische Gewürze mit reichem Aroma und Geschmack."
+      },
+      {
+        "name": "Handwerkskunst",
+        "desc": "Traditionelle handgefertigte Kunstwerke von lokalen Handwerkern."
+      }
+    ]
+  }
+}

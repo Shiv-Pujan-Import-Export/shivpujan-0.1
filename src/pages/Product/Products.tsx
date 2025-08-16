@@ -1,66 +1,59 @@
-import React, { useEffect, useState } from 'react';
-import styles from './Products.module.css';
+import React from "react";
+import { useTranslation } from "../../context/TranslationContext";
+import styles from "./Products.module.css";
 
-type LangType = 'en' | 'hi' | 'ru' | 'de';
+import product1 from "../../assets/product_img/agriculture.jpg";
+import product2 from "../../assets/product_img/machinery.jpg";
+import product3 from "../../assets/product_img/handicrafts.jpg";
 
-type ProductsProps = {
-  lang: LangType;
-};
+// Define your static product data here (with image references)
+const staticProducts = [
+  {
+    id: 1,
+    nameKey: "products.items.0.name",
+    descKey: "products.items.0.desc",
+    image: product1,    
+  },
+  {
+    id: 2,
+    nameKey: "products.items.1.name",
+    descKey: "products.items.1.desc",
+    image: product2,
+  },
+  {
+    id: 3,
+    nameKey: "products.items.2.name",
+    descKey: "products.items.2.desc",
+    image: product3,
+  },
+];
 
-type Product = {
-  id: number;
-  name: string;
-  desc: string;
-  image?: string;
-};
+// ✅ Helper to resolve nested keys from object
+function getValueByPath(obj: any, path: string): string {
+  return path.split(".").reduce((acc, key) => acc?.[key], obj) || "";
+}
 
-const sectionHeading = {
-  en: 'Our Products & Services',
-  hi: 'हमारे उत्पाद और सेवाएँ',
-};
-
-const BACKEND_URL = 'http://localhost:4000';
-
-const Products: React.FC<ProductsProps> = ({ lang }) => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    setLoading(true);
-    setError(null);
-    fetch(`${BACKEND_URL}/api/products?lang=${lang}`)
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch products');
-        return res.json();
-      })
-      .then(data => {
-        setProducts(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, [lang]);
+const Products: React.FC = () => {
+  const { t } = useTranslation(); // t is an object, not a function
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>{sectionHeading[lang]}</h1>
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <h1 className={styles.heading}>{t.products.heading}</h1>
+
       <div className={styles.grid}>
-        {!loading && !error && products.map((product) => (
+        {staticProducts.map((product) => (
           <div key={product.id} className={styles.card}>
-            {product.image && (
-              <img
-                src={product.image.startsWith('http') ? product.image : `${BACKEND_URL}${product.image}`}
-                alt={product.name}
-                className={styles.image}
-              />
-            )}
-            <h3 className={styles.cardHeading}>{product.name}</h3>
-            <p className={styles.description}>{product.desc}</p>
+            <img
+              src={product.image}
+              alt={getValueByPath(t, product.nameKey)}
+              className={styles.image}
+            />
+            <h3 className={styles.cardHeading}>
+              {getValueByPath(t, product.nameKey)}
+            </h3>
+            <p className={styles.description}>
+              {getValueByPath(t, product.descKey)}
+            </p>
           </div>
         ))}
       </div>
@@ -68,4 +61,4 @@ const Products: React.FC<ProductsProps> = ({ lang }) => {
   );
 };
 
-export default Products; 
+export default Products;
