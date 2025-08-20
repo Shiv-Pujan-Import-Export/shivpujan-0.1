@@ -23,7 +23,7 @@ export interface Translation {
     items: {
       name: string;
       desc: string;
-      image: string;
+      image?: string;
     }[];
   };
   contact: {
